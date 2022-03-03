@@ -1,26 +1,20 @@
 //
-//  ContentView.swift
+//  WorkoutView.swift
 //  Workout
 //
-//  Created by brotelande hector on 03/03/2022.
+//  Created by niebel romain on 03/03/2022.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct WorkoutView: View {
     var body: some View {
-        VStack {
-            HStack {
-                Text("Bike")
-                    .font(.system(size: 16, weight: .medium))
-            }
-            Spacer()
-        }
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct WorkoutView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        WorkoutView()
     }
 }

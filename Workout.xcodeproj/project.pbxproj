@@ -10,8 +10,8 @@
 		488683E627D0B97A0043B1E0 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488683E527D0B97A0043B1E0 /* Workout.swift */; };
 		488683E827D0BC550043B1E0 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488683E727D0BC550043B1E0 /* TimerView.swift */; };
 		488683EA27D0BCFC0043B1E0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488683E927D0BCFC0043B1E0 /* ProfileView.swift */; };
+		488683EC27D0BDA00043B1E0 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488683EB27D0BDA00043B1E0 /* WorkoutView.swift */; };
 		7F506F6027D0B0A700BB0B70 /* WorkoutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F506F5F27D0B0A700BB0B70 /* WorkoutApp.swift */; };
-		7F506F6227D0B0A700BB0B70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F506F6127D0B0A700BB0B70 /* ContentView.swift */; };
 		7F506F6427D0B0AA00BB0B70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F506F6327D0B0AA00BB0B70 /* Assets.xcassets */; };
 		7F506F6727D0B0AA00BB0B70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F506F6627D0B0AA00BB0B70 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -20,9 +20,9 @@
 		488683E527D0B97A0043B1E0 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		488683E727D0BC550043B1E0 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		488683E927D0BCFC0043B1E0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		488683EB27D0BDA00043B1E0 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		7F506F5C27D0B0A700BB0B70 /* Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F506F5F27D0B0A700BB0B70 /* WorkoutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutApp.swift; sourceTree = "<group>"; };
-		7F506F6127D0B0A700BB0B70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7F506F6327D0B0AA00BB0B70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F506F6627D0B0AA00BB0B70 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,9 +50,9 @@
 			isa = PBXGroup;
 			children = (
 				7F506F5F27D0B0A700BB0B70 /* WorkoutApp.swift */,
-				7F506F6127D0B0A700BB0B70 /* ContentView.swift */,
 				488683E727D0BC550043B1E0 /* TimerView.swift */,
 				488683E927D0BCFC0043B1E0 /* ProfileView.swift */,
+				488683EB27D0BDA00043B1E0 /* WorkoutView.swift */,
 			);
 			path = Vue;
 			sourceTree = "<group>";
@@ -170,10 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F506F6227D0B0A700BB0B70 /* ContentView.swift in Sources */,
 				7F506F6027D0B0A700BB0B70 /* WorkoutApp.swift in Sources */,
 				488683EA27D0BCFC0043B1E0 /* ProfileView.swift in Sources */,
 				488683E827D0BC550043B1E0 /* TimerView.swift in Sources */,
+				488683EC27D0BDA00043B1E0 /* WorkoutView.swift in Sources */,
 				488683E627D0B97A0043B1E0 /* Workout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
