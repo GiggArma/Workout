@@ -14,3 +14,16 @@ enum Mode : String,CaseIterable {
     case walk
 }
 
+
+struct Workout:Identifiable {
+    var id = UUID()
+    var mode : Mode
+    
+    static var testWorkout = [
+        Workout(id : UUID(), mode: .bike),
+        Workout(id : UUID(),mode: .run),
+        Workout(id : UUID(),mode: .walk)
+    
+    ]
+}
+
