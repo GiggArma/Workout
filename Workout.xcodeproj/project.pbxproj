@@ -32,6 +32,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		488683E127D0B5680043B1E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		488683E227D0B5730043B1E0 /* Vue */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vue;
+			sourceTree = "<group>";
+		};
+		488683E427D0B5850043B1E0 /* VueModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VueModel;
+			sourceTree = "<group>";
+		};
 		7F506F5327D0B0A700BB0B70 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +72,9 @@
 		7F506F5E27D0B0A700BB0B70 /* Workout */ = {
 			isa = PBXGroup;
 			children = (
+				488683E427D0B5850043B1E0 /* VueModel */,
+				488683E227D0B5730043B1E0 /* Vue */,
+				488683E127D0B5680043B1E0 /* Model */,
 				7F506F5F27D0B0A700BB0B70 /* WorkoutApp.swift */,
 				7F506F6127D0B0A700BB0B70 /* ContentView.swift */,
 				7F506F6327D0B0AA00BB0B70 /* Assets.xcassets */,
