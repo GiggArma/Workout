@@ -9,7 +9,20 @@ import SwiftUI
 
 struct TimerView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        Button{
+            
+        }label:{
+           
+            Text("▶️ GO")
+                .foregroundColor(.white)
+                .font(.headline)
+                .frame(height:55)
+                .frame(maxWidth: 150)
+                .background(Color.orange)
+                .cornerRadius(50)
+        }
+        
     }
 }
 
