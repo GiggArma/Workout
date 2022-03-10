@@ -10,7 +10,9 @@ import SwiftUI
 struct TimerView: View {
     
     @State var mode : Mode = .bike
-    @State var progressTime = 236
+    @State var progressTime = 0
+    @State private var isRunning = false
+    @State var isLaunched = false
     
     var hours: Int {
       progressTime / 3600
@@ -29,21 +31,24 @@ struct TimerView: View {
     var body: some View {
         
         VStack{
+            Spacer()
             
             HStack(spacing: 10) {
                 StopWatchView(timeUnit: hours)
                     Text(":")
                         .font(.system(size: 48))
                         .foregroundColor(.black)
-                        .offset(y: -18)
+                        .offset(y: -5)
                 StopWatchView(timeUnit: minutes)
                     Text(":")
                         .font(.system(size: 48))
                         .foregroundColor(.black)
-                        .offset(y: -18)
+                        .offset(y: -5)
                 StopWatchView(timeUnit: seconds)
             }
             
+            Spacer()
+                
             Picker("Mode",selection: $mode){
                 ForEach(Mode.allCases,id : \.self){pri
                     in
@@ -55,18 +60,38 @@ struct TimerView: View {
             
             
             
-            Button{
-                
-            }label:{
-               
-                Text("▶️ GO")
-                    .foregroundColor(.white)
-                    .font(.headline)
-                    .frame(height:55)
-                    .frame(maxWidth: 150)
-                    .background(Color.orange)
-                    .cornerRadius(50)
+            Button(action: {
+                if isRunning{
+                    timer?.invalidate()
+                } else {
+                    timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
+                        progressTime += 1
+                    })
+                }
+                isRunning.toggle()
+                isLaunched = true
+            }) {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 15.0)
+                        .frame(width: 200, height: 50, alignment: .center)
+                        .foregroundColor(.orange)
+
+                    Text(isRunning ? "⏹ Stop" : "▶️ GO")
+                        .font(.body)
+                        .bold()
+                        .foregroundColor(.white)
+                }
             }
+            Button("↩️ Restart", action: {
+                if progressTime > 0 {
+                    progressTime = 0
+                } else {
+                    isLaunched = false
+                }
+            })
+                .disabled(!isLaunched)
+            
+            Spacer()
         }
     }
 }
