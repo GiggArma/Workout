@@ -15,6 +15,14 @@ enum Mode : String,CaseIterable {
 }
 
 
+enum Sexe : String, CaseIterable{
+    case female
+    
+    case male
+    
+    case other
+}
+
 struct Workout:Identifiable {
     var id = UUID()
     var mode : Mode
@@ -26,4 +34,17 @@ struct Workout:Identifiable {
     
     ]
 }
+
+struct WorkoutSexe:Identifiable {
+    var id = UUID()
+    var sexe : Sexe
+    
+    static var testWorkout = [
+        WorkoutSexe(id : UUID(),sexe : .female),
+        WorkoutSexe(id : UUID(),sexe : .male),
+        WorkoutSexe(id : UUID(),sexe : .other)
+    
+    ]
+}
+
 
