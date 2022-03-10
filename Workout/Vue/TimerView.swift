@@ -13,6 +13,7 @@ struct TimerView: View {
     @State var progressTime = 0
     @State private var isRunning = false
     @State var isLaunched = false
+    @State var distance: Double = 0
     
     var hours: Int {
       progressTime / 3600
@@ -32,20 +33,29 @@ struct TimerView: View {
         
         VStack{
             Spacer()
+            Spacer()
             
             HStack(spacing: 10) {
                 StopWatchView(timeUnit: hours)
                     Text(":")
                         .font(.system(size: 48))
+                        .bold()
                         .foregroundColor(.black)
                         .offset(y: -5)
                 StopWatchView(timeUnit: minutes)
                     Text(":")
                         .font(.system(size: 48))
+                        .bold()
                         .foregroundColor(.black)
                         .offset(y: -5)
                 StopWatchView(timeUnit: seconds)
             }
+            
+            Spacer()
+            
+            Text("\(distance) m")
+                .font(.system(size: 35))
+                .foregroundColor(.black)
             
             Spacer()
                 
@@ -66,6 +76,7 @@ struct TimerView: View {
                 } else {
                     timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
                         progressTime += 1
+                        distance += 4.631
                     })
                 }
                 isRunning.toggle()
@@ -85,6 +96,7 @@ struct TimerView: View {
             Button("↩️ Restart", action: {
                 if progressTime > 0 {
                     progressTime = 0
+                    distance = 0
                 } else {
                     isLaunched = false
                 }
