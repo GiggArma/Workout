@@ -18,7 +18,7 @@ struct TimerView: View {
             Picker("Mode",selection: $mode){
                 ForEach(Mode.allCases,id : \.self){pri
                     in
-                    Text(pri.rawValue)
+                    Text("\(pri.rawValue)")
                 }
             }
             .padding(25)

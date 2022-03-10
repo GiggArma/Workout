@@ -9,9 +9,9 @@ import Foundation
 import CoreText
 
 enum Mode : String,CaseIterable {
-    case bike
-    case run
-    case walk
+    case bike = "🚲"
+    case run = "🏃‍♂️"
+    case walk = "🚶🏻"
 }
 
 
