@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     
-//   let date: Date
+//    let date: Date
 //    var dateFormatter: DateFormatterProtocol
        
 //    init(dateFormatter: DateFormatterProtocol = DateFormatter()) {
@@ -19,9 +19,9 @@ struct ProfileView: View {
        
 //    }
        
-//    var dateValue: String {
-//        return dateFormatter.string(from: date)
-//    }
+   // var dateValue: String {
+   // return dateFormatter.string(from: date)
+   // }
 
 
     @State var sexe : Sexe = .female
@@ -31,46 +31,53 @@ struct ProfileView: View {
     
     var body: some View {
           
+       
+        ZStack{
+            Color(.systemGray4)
+                .edgesIgnoringSafeArea(.all)
+            VStack(spacing: 0) {
                 
-        ZStack {
-            
-            VStack {
-                
+        
                 Text("Profile")
                     .font(.system(size : 45))
                     .bold()
-                    .padding(.horizontal)
-                    .frame(height: 55)
-                
-                
+                    .frame(maxWidth: .infinity, alignment: .topLeading)
+                    .padding(10)
+            
                 TextField("First name", text: $firstName)
                     .padding(.horizontal)
-                    .frame(height: 55)
+                    .frame(height: 50)
                     .foregroundColor(.black)
-                    .cornerRadius(10)
+                    .cornerRadius(50.0)
+                    .background(Color(.white))
                 TextField("Last name", text: $lastName)
                     .padding(.horizontal)
                     .frame(height: 55)
                     .cornerRadius(10)
+                    .background(Color(.white))
                 Picker("Sexe",selection: $sexe){
                     ForEach(Sexe.allCases,id : \.self){pri
                         in
                         Text("\(pri.rawValue)")
                     }
                 }
+                
                 .padding(15)
                 .pickerStyle(SegmentedPickerStyle())
+                .background(Color(.white))
                 
-                HStack{
+                HStack(spacing : 0){
                     
-                    Text("Date of birth ")
-                        .padding(20)
+                    Text("Date of birth                  ")
+                        .padding(.horizontal)
+                        .frame(width : 210,height : 50, alignment: .center)
+                        .background(Color(.white))
                         
                     
                     Spacer()
                     
-                    Text(dateValue)
-                        .background(Color(.systemGray4))
+                    Text(" May 31,2000")
+                        .background(Color(.white))
                         .foregroundColor(.black)
                         //.padding()
                         //.lineSpacing(250)
@@ -89,16 +96,24 @@ struct ProfileView: View {
                     Text("Save")
                         .foregroundColor(.blue)
                         .background(Color.white)
+                        .frame(width : 400, alignment: .center)
+                        .padding(.horizontal)
                         
-                    
-                    
                     }
+                   Spacer()
                 }
+           
             }
-            .padding()
+        
+          //.padding()
             .navigationTitle("👤 Profile")
+        
+            Spacer()
             
+    
+        
     }
+    
 }
 
 
@@ -113,9 +128,8 @@ struct ProfileView_Previews: PreviewProvider {
 //        Group {
 //            ProfileView(dateFormatter: PreviewDateFormatter(locale: Locale(identifier: "fr")))
 //                .previewInterfaceOrientation(.portraitUpsideDown)
-//            
+            
 //            }
 //        }
 //    }
 }
-
