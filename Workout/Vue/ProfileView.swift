@@ -9,19 +9,19 @@ import SwiftUI
 
 struct ProfileView: View {
     
-    let date: Date
-    var dateFormatter: DateFormatterProtocol
+//   let date: Date
+//    var dateFormatter: DateFormatterProtocol
        
-    init(dateFormatter: DateFormatterProtocol = DateFormatter()) {
-        date = Date()
-        self.dateFormatter = dateFormatter
-        self.dateFormatter.dateStyle = .long
+//    init(dateFormatter: DateFormatterProtocol = DateFormatter()) {
+//        date = Date()
+//        self.dateFormatter = dateFormatter
+//        self.dateFormatter.dateStyle = .long
        
-    }
+//    }
        
-    var dateValue: String {
-        return dateFormatter.string(from: date)
-    }
+//    var dateValue: String {
+//        return dateFormatter.string(from: date)
+//    }
 
 
     @State var sexe : Sexe = .female
@@ -108,14 +108,14 @@ struct ProfileView_Previews: PreviewProvider {
     }
 
     
-struct MyView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            ProfileView(dateFormatter: PreviewDateFormatter(locale: Locale(identifier: "fr")))
-                .previewInterfaceOrientation(.portraitUpsideDown)
-            
-            }
-        }
-    }
+//struct MyView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Group {
+//            ProfileView(dateFormatter: PreviewDateFormatter(locale: Locale(identifier: "fr")))
+//                .previewInterfaceOrientation(.portraitUpsideDown)
+//            
+//            }
+//        }
+//    }
 }
 
