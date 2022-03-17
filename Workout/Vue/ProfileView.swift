@@ -30,9 +30,19 @@ struct ProfileView: View {
     
     
     var body: some View {
+          
+                
         ZStack {
-    
+            
             VStack {
+                
+                Text("Profile")
+                    .font(.system(size : 45))
+                    .bold()
+                    .padding(.horizontal)
+                    .frame(height: 55)
+                
+                
                 TextField("First name", text: $firstName)
                     .padding(.horizontal)
                     .frame(height: 55)
@@ -41,7 +51,6 @@ struct ProfileView: View {
                 TextField("Last name", text: $lastName)
                     .padding(.horizontal)
                     .frame(height: 55)
-
                     .cornerRadius(10)
                 Picker("Sexe",selection: $sexe){
                     ForEach(Sexe.allCases,id : \.self){pri
@@ -49,23 +58,28 @@ struct ProfileView: View {
                         Text("\(pri.rawValue)")
                     }
                 }
+                .padding(15)
                 .pickerStyle(SegmentedPickerStyle())
                 
                 HStack{
-                    Text("Date of birth")
-                        .padding(.horizontal)
-                        .frame(height: 55)
-                        .cornerRadius(10)
+                    
+                    Text("Date of birth ")
+                        .padding(20)
+                        
                     
                     Spacer()
                     
                     Text(dateValue)
                         .background(Color(.systemGray4))
-                        .foregroundColor(.white)
-                        .font(.headline)
-                        .frame(height:55)
-                        .frame(maxWidth: 150)
-                        .cornerRadius(50)
+                        .foregroundColor(.black)
+                        //.padding()
+                        //.lineSpacing(250)
+                        .frame(width: 200, height: 50, alignment: .center)
+                        .cornerRadius(50.0)
+                        //.frame(height: 50)
+                        
+                    
+                    
                 }
                 
                 Button{
@@ -75,10 +89,9 @@ struct ProfileView: View {
                     Text("Save")
                         .foregroundColor(.blue)
                         .background(Color.white)
-                        .padding(.horizontal)
-                        .frame(height: 55)
-                        .cornerRadius(10)
                         
+                    
+                    
                     }
                 }
             }
@@ -93,10 +106,16 @@ struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
     }
+
+    
+struct MyView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            ProfileView(dateFormatter: PreviewDateFormatter(locale: Locale(identifier: "fr")))
+                .previewInterfaceOrientation(.portraitUpsideDown)
+            
+            }
+        }
+    }
 }
-//struct MyView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ProfileView(dateFormatter: PreviewDateFormatter(locale: Locale(identifier: "fr")))
-//        }
-//    }
-//}
+
