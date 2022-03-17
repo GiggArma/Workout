@@ -39,3 +39,33 @@ struct PreviewDateFormatter: DateFormatterProtocol {
     }
     
 }
+
+class WorkoutViewModel: ObservableObject {
+    @Published var workouts: [Workout] = []
+    
+    init() {
+        getWorkouts()
+    }
+    
+    func getWorkouts() {
+        workouts.append(contentsOf: Workout.testWorkout)
+    }
+    
+    func deleteItem(indexSet: IndexSet) {
+        workouts.remove(atOffsets: indexSet)
+    }
+    
+    func moveItem(from: IndexSet, to: Int) {
+        workouts.move(fromOffsets: from, toOffset: to)
+    }
+    
+    func updateItem(workout: Workout) {
+        let index = workouts.firstIndex(where: { existingWorkout in
+            return workout.id == existingWorkout.id
+        })
+        
+        if let index = index {
+            workouts[index].isCompleted.toggle()
+        }
+    }
+}

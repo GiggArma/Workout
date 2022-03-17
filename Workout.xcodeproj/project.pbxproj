@@ -16,6 +16,7 @@
 		7F506F6427D0B0AA00BB0B70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F506F6327D0B0AA00BB0B70 /* Assets.xcassets */; };
 		7F506F6727D0B0AA00BB0B70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F506F6627D0B0AA00BB0B70 /* Preview Assets.xcassets */; };
 		7F506F6E27D0C0C000BB0B70 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F506F6D27D0C0C000BB0B70 /* MainView.swift */; };
+		7F9C87D527E32D100067F67D /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C87D427E32D100067F67D /* RowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		7F506F6327D0B0AA00BB0B70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F506F6627D0B0AA00BB0B70 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7F506F6D27D0C0C000BB0B70 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		7F9C87D427E32D100067F67D /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				488683E927D0BCFC0043B1E0 /* ProfileView.swift */,
 				488683EB27D0BDA00043B1E0 /* WorkoutView.swift */,
 				7F506F6D27D0C0C000BB0B70 /* MainView.swift */,
+				7F9C87D427E32D100067F67D /* RowView.swift */,
 			);
 			path = Vue;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				7F506F6027D0B0A700BB0B70 /* WorkoutApp.swift in Sources */,
 				7F506F6E27D0C0C000BB0B70 /* MainView.swift in Sources */,
 				488683EA27D0BCFC0043B1E0 /* ProfileView.swift in Sources */,
+				7F9C87D527E32D100067F67D /* RowView.swift in Sources */,
 				48A1573627D9F95D00D4D3D3 /* WorkoutVueModel.swift in Sources */,
 				488683E827D0BC550043B1E0 /* TimerView.swift in Sources */,
 				488683EC27D0BDA00043B1E0 /* WorkoutView.swift in Sources */,

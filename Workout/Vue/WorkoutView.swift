@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct WorkoutView: View {
+    
+    @EnvironmentObject var data : WorkoutViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                ForEach(data.workouts) { workout in
+                    
+                }
+            }
+        }
     }
 }
 
 struct WorkoutView_Previews: PreviewProvider {
     static var previews: some View {
         WorkoutView()
+            .environmentObject(WorkoutViewModel())
     }
 }
