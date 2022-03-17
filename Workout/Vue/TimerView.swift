@@ -53,7 +53,7 @@ struct TimerView: View {
             
             Spacer()
             
-            Text("\(distance) m")
+            Text(isRunning ? "\(distance, specifier: "%.3f") m" : "0 m")
                 .font(.system(size: 35))
                 .foregroundColor(.black)
             

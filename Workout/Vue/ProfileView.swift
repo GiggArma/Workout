@@ -93,10 +93,10 @@ struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
     }
-    
-struct MyView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView(dateFormatter: PreviewDateFormatter(locale: Locale(identifier: "fr")))
-        }
-    }
 }
+//struct MyView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ProfileView(dateFormatter: PreviewDateFormatter(locale: Locale(identifier: "fr")))
+//        }
+//    }
+//}
