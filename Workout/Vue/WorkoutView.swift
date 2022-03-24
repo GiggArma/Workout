@@ -9,14 +9,14 @@ import SwiftUI
 
 struct WorkoutView: View {
     
-    @EnvironmentObject var data : WorkoutViewModel
+    @ObservedObject var data : WorkoutViewModel
     
     var body: some View {
         
         NavigationView {
             List {
                 ForEach(data.workouts) { workout in
-                    RowView(workout : workout)
+                    RowView()
                         .onTapGesture {
                             data.updateItem(workout: workout)
                         }
@@ -37,7 +37,7 @@ struct WorkoutView: View {
 
 struct WorkoutView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutView()
+        WorkoutView(data: WorkoutViewModel())
             .environmentObject(WorkoutViewModel())
     }
 }
