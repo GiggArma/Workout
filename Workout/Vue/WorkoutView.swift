@@ -12,10 +12,23 @@ struct WorkoutView: View {
     @EnvironmentObject var data : WorkoutViewModel
     
     var body: some View {
+        
         NavigationView {
             List {
                 ForEach(data.workouts) { workout in
-                    
+                    RowView(workout : workout)
+                        .onTapGesture {
+                            data.updateItem(workout: workout)
+                        }
+                }
+                .onDelete(perform: data.deleteItem)
+                .onMove(perform: data.moveItem)
+            }
+            .listStyle(PlainListStyle())
+            .navigationTitle("Workouts")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
                 }
             }
         }
