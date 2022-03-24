@@ -1,10 +1,3 @@
-//
-//  WorkoutVueModel.swift
-//  Workout
-//
-//  Created by niebel romain on 10/03/2022.
-//
-
 import Foundation
 
 
@@ -60,8 +53,13 @@ class WorkoutViewModel: ObservableObject {
     }
     
     func updateItem(workout: Workout) {
-        let index = workouts.firstIndex(where: { existingWorkout in
+        let index = workouts.firstIndex(where: {existingWorkout
+            in
             return workout.id == existingWorkout.id
         })
+        if let index = index{
+            
+        WorkView()
+        }
     }
 }
