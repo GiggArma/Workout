@@ -21,7 +21,6 @@ struct ProfileView: View {
    // var dateValue: String {
    // return dateFormatter.string(from: date)
    // }
-
     @State var sexe : Sexe = .female
     @State var firstName: String = ""
     @State var lastName : String = ""
@@ -65,24 +64,23 @@ struct ProfileView: View {
                             
                             HStack(spacing : 0){
                                 
-                                Text("Date of birth                  ")
+                                Text("Date of birth")
                                     .padding(.horizontal)
-                                    .frame(width : 210,height : 50, alignment: .center)
+                                    .frame(width : 210,height : 50, alignment: .leading)
                                     .background(Color(.white))
+                                
+                                ZStack {
                                     
-                                
-                                Spacer()
-                                
-                                Text(" May 31,2000")
-                                    .background(Color(.white))
-                                    .foregroundColor(.black)
-                                    //.padding()
-                                    //.lineSpacing(250)
-                                    .frame(width: 200, height: 50, alignment: .center)
-                                    .cornerRadius(15.0)
-                                    //.frame(height: 50)
+                                    Text(" May 31, 2000")
+                                        .padding()
+                                        .background(Color(.systemGray6))
+                                        .foregroundColor(.black)
+                                        //.lineSpacing(250)
+                                        .frame(width: 140, height: 50, alignment: .leading)
+                                        .cornerRadius(15.0)
+                                        //.frame(height: 50)
                                     
-                                
+                                }
                                 
                             }
                             
@@ -100,8 +98,7 @@ struct ProfileView: View {
                                 }
                                Spacer()
                             }
-                       
-                        .navigationTitle("Profile")
+                            .navigationTitle("Profile")
                         
                         }
                     }
@@ -124,7 +121,6 @@ struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ProfileView()
-            ProfileView()
         }
     }
 
@@ -139,4 +135,3 @@ struct ProfileView_Previews: PreviewProvider {
 //        }
 //    }
 }
-
