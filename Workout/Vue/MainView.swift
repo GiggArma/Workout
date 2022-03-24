@@ -18,7 +18,7 @@ struct MainView: View {
                     Label("Timer", systemImage: "timer")
                 }
             
-            WorkoutView()
+            WorkoutView(data: WorkoutViewModel())
                 .tabItem {
                     Label("Workouts", systemImage: "list.bullet")
                 }
