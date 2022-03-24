@@ -63,9 +63,5 @@ class WorkoutViewModel: ObservableObject {
         let index = workouts.firstIndex(where: { existingWorkout in
             return workout.id == existingWorkout.id
         })
-        
-        if let index = index {
-            workouts[index].isCompleted.toggle()
-        }
     }
 }
