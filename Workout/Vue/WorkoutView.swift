@@ -4,7 +4,6 @@
 //
 //  Created by niebel romain on 03/03/2022.
 //
-
 import SwiftUI
 
 struct WorkoutView: View {
@@ -41,3 +40,4 @@ struct WorkoutView_Previews: PreviewProvider {
             .environmentObject(WorkoutViewModel())
     }
 }
+
